@@ -12,7 +12,7 @@ var createScene = function () {
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
     // Import Red Yeti
-    BABYLON.SceneLoader.ImportMesh("", "assets/scene.glb", "Yeti", scene, function (newMeshes) {
+    BABYLON.SceneLoader.ImportMesh("", "assets/scene.glb", scene, function (newMeshes) {
         var yetiMesh = newMeshes[0];
         yetiMesh.material.diffuseColor = BABYLON.Color3.Red();
         yetiMesh.scaling = new BABYLON.Vector3(0.1, 0.1, 0.1);
