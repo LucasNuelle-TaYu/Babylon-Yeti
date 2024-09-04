@@ -12,7 +12,7 @@ var createScene = function () {
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
     // Import Red Yeti
-    BABYLON.SceneLoader.ImportMesh("", "https://raw.githubusercontent.com/BabylonJS/Assets/tree/master/meshes/Yeti/MayaExport/glTF/", "Yeti.gltf", scene, function (newMeshes) { });
+    BABYLON.SceneLoader.ImportMesh("", "https://assets.babylonjs.com/meshes/Yeti/MayaExport/glTF/", "Yeti.gltf", scene, function (newMeshes) { });
     return scene;
 };
 var scene = createScene(); //Call the createScene function
