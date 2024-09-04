@@ -18,7 +18,7 @@ const createScene = function () {
     light.intensity = 0.7;
 
     // Import Red Yeti
-    BABYLON.SceneLoader.ImportMesh("", "assets/scene.glb", scene, function(newMeshes){
+    BABYLON.SceneLoader.ImportMesh("", "assets", "scene.glb", scene, function(newMeshes){
         const yetiMesh = newMeshes[0];
         
         yetiMesh.material.diffuseColor = BABYLON.Color3.Red();
