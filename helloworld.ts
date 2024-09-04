@@ -18,13 +18,7 @@ const createScene = function () {
     light.intensity = 0.7;
 
     // Import Red Yeti
-    BABYLON.SceneLoader.ImportMesh("", "assets/", "scene.glb", scene, function(newMeshes){
-        const yetiMesh = newMeshes[0];
-        
-        yetiMesh.material.diffuseColor = BABYLON.Color3.Red();
-        yetiMesh.scaling = new BABYLON.Vector3(0.1, 0.1, 0.1);
-
-    });
+    BABYLON.SceneLoader.ImportMesh("", "https://raw.githubusercontent.com/BabylonJS/Assets/tree/master/meshes/Yeti/MayaExport/glTF/", "Yeti.gltf", scene, function(newMeshes){});
 
 
     return scene;
