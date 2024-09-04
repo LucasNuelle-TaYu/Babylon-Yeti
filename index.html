@@ -4,20 +4,34 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Babylon.js sample code</title>
         <style>
-          html,
-          body {
+        html,
+        body {
             overflow: hidden;
             width: 100%;
             height: 100%;
             margin: 0;
             padding: 0;
-          }
+        }
     
-          #renderCanvas {
+        #renderCanvas {
             width: 100%;
             height: 100%;
             touch-action: none;
-          }
+        }
+          
+        #worldView {
+            width: 80%;
+            height: 100%;
+            float: left;
+        }
+
+        #rightSidebar {
+            width: 20%;
+            height: 100%;
+            float: left;
+            background-color: grey;
+        }
+
         </style>
         
         <script src="https://cdn.babylonjs.com/babylon.js"></script>
@@ -25,8 +39,14 @@
         <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
     </head>
     <body>
-        TITLE
-        <canvas id="renderCanvas" touch-action="none"></canvas>
+	    <div id = "worldView">
+            <canvas id="renderCanvas" touch-action="none"></canvas>
+        </div>
+	    <div id = "rightSidebar">
+            <br>
+                <h2>TITLE RIGHT SIDE</h2>
+            <br>
+        </div>
         <script src="out/helloworld.js">
         </script>
     </body>
