@@ -11,15 +11,11 @@ var createScene = function () {
     var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
-    // Our built-in 'ground' shape.
-    var ground = BABYLON.MeshBuilder.CreateGround("ground", { width: 6, height: 6 }, scene);
-    var groundMaterial = new BABYLON.StandardMaterial("Ground Material", scene);
-    ground.material = groundMaterial;
-    var groundTexture = new BABYLON.Texture(Assets.textures.checkerboard_basecolor_png.path, scene);
-    groundMaterial.diffuseColor = BABYLON.Color3.Red();
-    groundMaterial.diffuseTexture = groundTexture;
+    // Import Red Yeti
     BABYLON.SceneLoader.ImportMesh("", "https://raw.githubusercontent.com/BabylonJS/Assets/blob/master/meshes/Yeti/Unity/YetiUnity.gltf", "Yeti", scene, function (newMeshes) {
-        newMeshes[0].scaling = new BABYLON.Vector3(0.1, 0.1, 0.1);
+        var yetiMesh = newMeshes[0];
+        yetiMesh.material.diffuseColor = BABYLON.Color3.Red();
+        yetiMesh.scaling = new BABYLON.Vector3(0.1, 0.1, 0.1);
     });
     return scene;
 };
