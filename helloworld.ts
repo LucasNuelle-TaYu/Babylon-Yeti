@@ -26,7 +26,7 @@ const createScene = function () {
     groundMaterial.diffuseColor = BABYLON.Color3.Red();
     groundMaterial.diffuseTexture = groundTexture;
 
-    BABYLON.SceneLoader.ImportMesh("", Assets.meshes.Yeti.rootUrl, Assets.meshes.Yeti.filename, scene, function(newMeshes){
+    BABYLON.SceneLoader.ImportMesh("", "https://raw.githubusercontent.com/BabylonJS/Assets/blob/master/meshes/Yeti/Unity/YetiUnity.gltf", "Yeti", scene, function(newMeshes){
         newMeshes[0].scaling = new BABYLON.Vector3(0.1, 0.1, 0.1);
     });
 
